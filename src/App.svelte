@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
 
   import { Chart, registerables } from "chart.js";
+  import { IconBrandGithub } from "@tabler/icons-svelte";
   import { PIDController } from "./lib/pid";
   import { isGmMotorType, MOTOR_SPECS, type MotorType } from "./lib/motor";
   import { buildMotorCommand } from "./lib/communication/command";
@@ -535,7 +536,18 @@
 
 <main>
   <header class="app-header">
-    <h1>RoboMaster CAN コントローラー</h1>
+    <div class="header-title-area">
+      <h1>RoboMaster CAN コントローラー</h1>
+      <a
+        href="https://github.com/Suzu-Gears/robomaster-web-can"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="github-link"
+        title="GitHub repository"
+      >
+        <IconBrandGithub size={24} />
+      </a>
+    </div>
     <div class="mode-selector">
       <button
         class="mode-btn"
@@ -1269,6 +1281,21 @@
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid #ddd;
+  }
+  .header-title-area {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .github-link {
+    color: #333;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+    text-decoration: none;
+  }
+  .github-link:hover {
+    color: var(--primary-color);
   }
   h1 {
     margin: 0;
