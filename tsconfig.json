@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "allowJs": false,
+    "checkJs": false,
+    "isolatedModules": true,
+    "types": ["vite/client", "@types/w3c-web-serial"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.svelte", "vite.config.ts"],
+  "exclude": ["dist"]
+}
